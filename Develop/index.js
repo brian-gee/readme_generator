@@ -1,27 +1,28 @@
-// TODO: Include packages needed for this application
+// Import necessary packages
 import inquirer from 'inquirer';
 import fs from "fs";
+import { generateMarkdown } from './utils/generateMarkdown.js';
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
-        name: "project_title",
+        name: "title",
         type: "input",
         message: "What is your project title?",
     },
     {
-        name: "project_description",
+        name: "description",
         type: "input",
         message: "Give a short description of your project.",
     },
     {
-        name: "install_steps",
+        name: "license",
         type: "input",
         message: "What are the steps required to install your project?",
     },
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if (err) {
@@ -32,12 +33,11 @@ function writeToFile(fileName, data) {
 
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     console.log("Welcome to Brian's README Generator V1.0");
     inquirer.prompt(questions).then((answers) => {
-    console.log(answers);
-    writeToFile("README.md", "test")
+    writeToFile("README.md", generateMarkdown(answers));
   })
   .catch((error) => {
     if (error.isTtyError) {
