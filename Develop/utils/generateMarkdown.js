@@ -64,7 +64,9 @@ ${data.test_instructions}
 
 ## Questions
 
-${data.questions_username} - [Email](${data.questions_email})
+Github - [${data.questions_username}](https://github.com/${data.questions_username})
+
+Email - [Send me a message](mailto:${data.questions_email})
 
 
 ${renderLicenseSection(data.license)}
