@@ -21,19 +21,16 @@ const questions = [
       message: 'What steps are required to install your project?'
     },
     {
-
       name: 'usage_information',
       type: 'input',
       message: 'Input usage information.'
     },
     {
-
       name: 'contribution_guidelines',
       type: 'input',
       message: 'Input contribution guidelines.'
     },
     {
-
       name: 'test_instructions',
       type: 'input',
       message: 'Input test instructions.'
