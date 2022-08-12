@@ -33,7 +33,8 @@ You can test this program by running it within your own machine.
 
 ## Questions
 
-brian-gee - [Email](brian-gee@email.com)
+Github - [brian-gee](github.com/brian-gee)
+Email - [Send me a message](brian-gee@email.com)
 
 
 ![pic-selected-220811-2206-50](https://user-images.githubusercontent.com/39035211/184271860-58a4d8c6-28ae-4e0d-9476-d8eb077af16d.png)
