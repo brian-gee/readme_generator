@@ -40,7 +40,7 @@ const questions = [
     },
     {
         name: 'license',
-        type: 'rawlist',
+        type: 'list',
         message: 'What license will your project use?',
         choices: ["MIT", "APACHE2.0", "GPLv2", "GPLv3", "BSD2", "BSD3", "None"],
         default: 'None',
