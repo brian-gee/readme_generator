@@ -1,64 +1,77 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (license !== 'None') {
+    return `![Github license](https://img.shields.io/badge/license-${license}-yellowgreen.svg)`
+  }
+  return ''
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license !== 'None') {
+    return (`- [License](#license)`)
+  }
+  return ''
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license !== 'None') {
+    return (
+      `## License
 
-// TODO: Create a function to generate markdown for README
+      Licensed under the ${license} license.`
+      )
+  }
+  return ''
+}
+
+// Generate markdown for README
 function generateMarkdown(data) {
   return `
 # ${data.title}
+${renderLicenseBadge(data.license)}
 
 ## Description
 
 ${data.description}
 
-## Installation
+## Table of Contents
+- [Installation Steps](#installation-steps)
+- [Usage Information](#usage-information)
+- [Contributing Guidelines](#contributing-guidelines)
+- [Tests](#tests)
+- [Questions](#questions)
+${renderLicenseLink(data.license)}
 
-${data.installation}
+## Installation Steps
 
-## Usage
+${data.installation_instructions}
 
-${data.usage}
+## Usage Information
 
-## License
+${data.usage_information}
 
-${data.license}
 
-## Contributing
+## Contributing Guidelines
 
-${data.contribution}
+${data.contribution_guidelines}
 
 ## Tests
-
-${data.description}
+\`\`\`
+${data.test_instructions}
+\`\`\`
 
 ## Questions
 
-${data.questions}
+${data.questions_username} - [Email](${data.questions_email})
+
+
+${renderLicenseSection(data.license)}
 `;
 }
 
 export { generateMarkdown };
-
-// GIVEN a command-line application that accepts user input
-// WHEN I am prompted for information about my application repository
-// THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-// WHEN I enter my project title
-// THEN this is displayed as the title of the README
-// WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-// THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-// WHEN I choose a license for my application from a list of options
-// THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-// WHEN I enter my GitHub username
-// THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-// WHEN I enter my email address
-// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-// WHEN I click on the links in the Table of Contents
-// THEN I am taken to the corresponding section of the README

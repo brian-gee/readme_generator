@@ -42,8 +42,18 @@ const questions = [
         name: 'license',
         type: 'rawlist',
         message: 'What license will your project use?',
-        choices: ['None', 'Apache License 2.0', 'Gnu General Public License v3.0', 'MIT License', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1', 'Mozilla Public License 2.0', 'The Unlicense'],
+        choices: ["MIT", "APACHE2.0", "GPLv2", "GPLv3", "BSD2", "BSD3", "None"],
         default: 'None',
+    },
+    {
+      name: 'questions_username',
+      type: 'input',
+      message: 'What is your GitHub username?'
+    },
+    {
+      name: 'questions_email',
+      type: 'input',
+      message: 'What is your email?'
     },
 ];
 
