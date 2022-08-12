@@ -33,9 +33,9 @@ You can test this program by running it within your own machine.
 
 ## Questions
 
-Github - [brian-gee](https://github.com/brian-gee)
+Github - [brian-gee](https://gitdhub.com/brian-gee)
 
-Email - [Send me a message](brian-gee@email.com)
+Email - [Send me a message](mailto:brian-gee@mail.com)
 
 
 ![pic-selected-220811-2206-50](https://user-images.githubusercontent.com/39035211/184271860-58a4d8c6-28ae-4e0d-9476-d8eb077af16d.png)
